@@ -2,20 +2,21 @@
     border: 1px solid brown;
 } */
 
-.thumbnail {
-    height: 145px;
-    width: 160px;
+.box {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 5px;
 }
 
 #sixboxesholder {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
     padding-left: 20%;
     padding-right: 20%;
     margin-top: 15px;
-}
-
-/* temporary */
-span { 
-    border: 1px solid blue;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #mainconsole {

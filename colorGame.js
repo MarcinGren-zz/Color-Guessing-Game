@@ -1,5 +1,5 @@
 var testColor = document.querySelector(".col-sm-4")
-var allColorSquares = document.querySelectorAll(".thumbnail")
+var allColorSquares = document.querySelectorAll(".box")
 var rgbHtmlAnswer = document.querySelector("#rgbanswer")
 var newColorsButton = document.querySelector("#newcolors")
 
