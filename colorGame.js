@@ -25,6 +25,7 @@ function checkIfClickedBoxIsTheCorrectOne(element) {
 function getRGBFromRandomedAnswer() { //can move randomAnswer inside
     correctAnswer = allColorSquares[randomAnswer].style.background.toUpperCase()
     rgbHtmlAnswer.innerHTML = correctAnswer //these 3 are temp, might refactor them later
+    rgbHtmlAnswer.style.textAlign="center"
 }
 
 function randomAllBoxesColors() {

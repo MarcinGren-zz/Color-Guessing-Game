@@ -10,9 +10,52 @@
 #sixboxesholder {
     padding-left: 20%;
     padding-right: 20%;
+    margin-top: 15px;
 }
 
 /* temporary */
 span { 
     border: 1px solid blue;
+}
+
+#mainconsole {
+    text-align: center;
+    background-color: blue;
+    height: 20%;
+    color: white;
+}
+
+#buttonconsole {
+    text-align: center;
+    background-color: white;
+    font-size: 17px;
+}
+
+#rgbanswer {
+    font-size: 33px;
+}
+
+body {
+    background-color: black;
+    font-family: 'Indie Flower', cursive;
+}
+
+p {
+    font-size: 24px;
+    margin: 0;
+}
+
+#newcolors {
+    position: relative;
+    right: 14%;
+}
+
+#easybutton {
+    position: relative;
+    left: 10%;
+}
+
+#hardbutton {
+    position: relative;
+    left: 11%;
 }
