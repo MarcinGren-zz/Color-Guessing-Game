@@ -14,6 +14,14 @@ function randomColor() {
     return "rgb(" + randomNumberRGB() + "," + randomNumberRGB() + "," + randomNumberRGB() + ")"
 }
 
+function checkIfClickedBoxIsTheCorrectOne(element) {
+    if (element.style.background.toUpperCase() == correctAnswer) {
+        console.log("GREAT!")
+    } else {
+        console.log("NOT GREAT :(")
+    }
+}
+
 function getRGBFromRandomedAnswer() { //can move randomAnswer inside
     correctAnswer = allColorSquares[randomAnswer].style.background.toUpperCase()
     rgbHtmlAnswer.innerHTML = correctAnswer //these 3 are temp, might refactor them later
@@ -22,6 +30,9 @@ function getRGBFromRandomedAnswer() { //can move randomAnswer inside
 function randomAllBoxesColors() {
     for (var i = 0; i < allColorSquares.length; i++) {
         allColorSquares[i].style.background = randomColor()
+        allColorSquares[i].addEventListener("click", function() {
+            checkIfClickedBoxIsTheCorrectOne(this)
+        })
     }
     getRGBFromRandomedAnswer()
 }
