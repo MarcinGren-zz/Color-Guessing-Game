@@ -12,3 +12,7 @@
     padding-right: 20%;
 }
 
+/* temporary */
+span { 
+    border: 1px solid blue;
+}
