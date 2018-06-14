@@ -1,0 +1,14 @@
+/* .col-sm-4 {
+    border: 1px solid brown;
+} */
+
+.thumbnail {
+    height: 145px;
+    width: 160px;
+}
+
+#sixboxesholder {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
