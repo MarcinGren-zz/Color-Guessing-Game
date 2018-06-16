@@ -1,7 +1,7 @@
 var testColor = document.querySelector(".col-sm-4")
 var allColorSquares = document.querySelectorAll(".box")
-var rgbHtmlAnswer = document.querySelector("#rgbanswer")
-var newColorsButton = document.querySelector("#newcolors")
+var rgbHtmlAnswer = document.querySelector(".rgbanswer")
+var newColorsButton = document.querySelector(".newcolors")
 
 var correctAnswer = "" //these 3 are temp, might refactor them later
 var randomAnswer = Math.floor(Math.random() * 6) //these 3 are temp, might refactor them later
@@ -19,6 +19,8 @@ function checkIfClickedBoxIsTheCorrectOne(element) {
         console.log("GREAT!")
     } else {
         console.log("NOT GREAT :(")
+        element.style.removeProperty("background")
+        element.classList.add("disabledbox")
     }
 }
 

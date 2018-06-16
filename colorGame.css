@@ -8,7 +8,7 @@
     margin-bottom: 5px;
 }
 
-#sixboxesholder {
+.sixboxesholder {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
@@ -19,20 +19,20 @@
     margin-right: auto;
 }
 
-#mainconsole {
+.mainconsole {
     text-align: center;
     background-color: blue;
     height: 20%;
     color: white;
 }
 
-#buttonconsole {
+.buttonconsole {
     text-align: center;
     background-color: white;
     font-size: 17px;
 }
 
-#rgbanswer {
+.rgbanswer {
     font-size: 33px;
 }
 
@@ -46,17 +46,28 @@ p {
     margin: 0;
 }
 
-#newcolors {
+.newcolors {
     position: relative;
-    right: 14%;
+    right: 20%;
 }
 
-#easybutton {
+.easybutton {
     position: relative;
     left: 10%;
 }
 
-#hardbutton {
+.hardbutton {
     position: relative;
-    left: 11%;
+    left: 12%;
+}
+
+button {
+    font-family: 'Indie Flower', cursive;
+    background: white;
+    border: 0px solid white;
+}
+
+.disabledbox {
+    background: black;
+    pointer-events:none;
 }
