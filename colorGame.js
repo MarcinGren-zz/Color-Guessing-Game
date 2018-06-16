@@ -30,14 +30,16 @@ function checkIfClickedBoxIsTheCorrectOne(element) {
 }
 
 function getRGBFromRandomedAnswer() { //can move randomAnswer inside
-    correctAnswer = allColorSquares[randomAnswer].style.background.toUpperCase()
+    correctAnswer = allColorSquares[Math.floor(Math.random() * 6)].style.background.toUpperCase()
     rgbHtmlAnswer.innerHTML = correctAnswer //these 3 are temp, might refactor them later
     rgbHtmlAnswer.style.textAlign="center"
 }
 
 function randomAllBoxesColors() {
+    randomAnswer = Math.floor(Math.random() * 6)
     for (var i = 0; i < allColorSquares.length; i++) {
         allColorSquares[i].style.background = randomColor()
+        allColorSquares[i].classList.remove("disabledbox")
         allColorSquares[i].addEventListener("click", function() {
             checkIfClickedBoxIsTheCorrectOne(this)
         })
