@@ -4,6 +4,8 @@ var rgbHtmlAnswer = document.querySelector(".rgbanswer")
 var newColorsButton = document.querySelector(".newcolors")
 var hardButton = document.querySelector(".hardbutton")
 var easyButton = document.querySelector(".easybutton")
+var tryAgainPlace = document.querySelector(".tryagain")
+var mainConsole = document.querySelector(".mainconsole")
 
 var correctAnswer = "" //these 3 are temp, might refactor them later
 var randomAnswer = Math.floor(Math.random() * 6) //these 3 are temp, might refactor them later
@@ -18,9 +20,10 @@ function randomColor() {
 
 function checkIfClickedBoxIsTheCorrectOne(element) {
     if (element.style.background.toUpperCase() == correctAnswer) {
-        console.log("GREAT!")
+        tryAgainPlace.innerHTML = "Correct!"
+        guessedCorrectly()
     } else {
-        console.log("NOT GREAT :(")
+        tryAgainPlace.innerHTML = "Try again"
         element.style.removeProperty("background")
         element.classList.add("disabledbox")
     }
@@ -40,6 +43,7 @@ function randomAllBoxesColors() {
         })
     }
     getRGBFromRandomedAnswer()
+    mainConsole.style.removeProperty("background")
 }
 
 function removeThreeBottomBoxes() {
@@ -49,6 +53,13 @@ function removeThreeBottomBoxes() {
         allColorSquares[i].classList.add("disabledbox")
         console.log(allColorSquares[i])
     }
+}
+
+function guessedCorrectly() {
+    for (var i = 0; i < allColorSquares.length; i++) {
+        allColorSquares[i].style.background = correctAnswer
+    }
+    mainConsole.style.background = correctAnswer
 }
 
 // //so this is working and randoming for the 1 element and its also a border
