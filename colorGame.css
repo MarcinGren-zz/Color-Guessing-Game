@@ -71,11 +71,11 @@ p {
 
 button {
     font-family: 'Indie Flower', cursive;
-    background: white;
+    background-color: white;
     border: 0px solid white;
 }
 
 .disabledbox {
-    background: black;
+    background-color: black;
     pointer-events:none;
 }

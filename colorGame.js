@@ -19,18 +19,18 @@ function randomColor() {
 }
 
 function checkIfClickedBoxIsTheCorrectOne(element) {
-    if (element.style.background.toUpperCase() == correctAnswer) {
+    if (element.style.backgroundColor.toUpperCase() == correctAnswer) {
         tryAgainPlace.innerHTML = "Correct!"
         guessedCorrectly()
     } else {
         tryAgainPlace.innerHTML = "Try again"
-        element.style.removeProperty("background")
+        element.style.removeProperty("background-color")
         element.classList.add("disabledbox")
     }
 }
 
 function getRGBFromRandomedAnswer() { //can move randomAnswer inside
-    correctAnswer = allColorSquares[Math.floor(Math.random() * 6)].style.background.toUpperCase()
+    correctAnswer = allColorSquares[Math.floor(Math.random() * 6)].style.backgroundColor.toUpperCase()
     rgbHtmlAnswer.innerHTML = correctAnswer //these 3 are temp, might refactor them later
     rgbHtmlAnswer.style.textAlign="center"
 }
@@ -38,20 +38,20 @@ function getRGBFromRandomedAnswer() { //can move randomAnswer inside
 function randomAllBoxesColors() {
     randomAnswer = Math.floor(Math.random() * 6)
     for (var i = 0; i < allColorSquares.length; i++) {
-        allColorSquares[i].style.background = randomColor()
+        allColorSquares[i].style.backgroundColor = randomColor()
         allColorSquares[i].classList.remove("disabledbox")
         allColorSquares[i].addEventListener("click", function() {
             checkIfClickedBoxIsTheCorrectOne(this)
         })
     }
     getRGBFromRandomedAnswer()
-    mainConsole.style.removeProperty("background")
+    mainConsole.style.removeProperty("backgroundColor")
 }
 
 function removeThreeBottomBoxes() {
     randomAllBoxesColors()
     for (var i = 3; i < allColorSquares.length; i++) {
-        allColorSquares[i].style.removeProperty("background")
+        allColorSquares[i].style.removeProperty("background-color")
         allColorSquares[i].classList.add("disabledbox")
         console.log(allColorSquares[i])
     }
@@ -59,9 +59,9 @@ function removeThreeBottomBoxes() {
 
 function guessedCorrectly() {
     for (var i = 0; i < allColorSquares.length; i++) {
-        allColorSquares[i].style.background = correctAnswer
+        allColorSquares[i].style.backgroundColor = correctAnswer
     }
-    mainConsole.style.background = correctAnswer
+    mainConsole.style.backgroundColor = correctAnswer
 }
 
 // //so this is working and randoming for the 1 element and its also a border
