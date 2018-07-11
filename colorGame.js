@@ -55,6 +55,7 @@ function removeThreeBottomBoxes() {
         allColorSquares[i].classList.add("disabledbox")
         console.log(allColorSquares[i])
     }
+    correctAnswer = allColorSquares[Math.floor(Math.random() * 3)].style.backgroundColor.toUpperCase()
 }
 
 function guessedCorrectly() {
