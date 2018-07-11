@@ -3,20 +3,28 @@
 } */
 
 .box {
-    height: 150px;
-    width: 150px;
-    margin-bottom: 5px;
+    /* height: 150px;
+    width: 150px; 
+    margin-bottom: 5px; */
+    
+    width: 30%;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.66%;
 }
 
 .sixboxesholder {
-    display: grid;
+    /* display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     padding-left: 20%;
     padding-right: 20%;
     margin-top: 15px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
+
+    max-width: 600px; 
+    margin: 0 auto
 }
 
 .mainconsole {
@@ -37,7 +45,7 @@
 }
 
 body {
-    background-color: #232323;
+    background-color: black;
     font-family: 'Indie Flower', cursive;
 }
 
