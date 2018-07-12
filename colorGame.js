@@ -63,6 +63,7 @@ function guessedCorrectly() {
         allColorSquares[i].style.backgroundColor = correctAnswer
     }
     mainConsole.style.backgroundColor = correctAnswer
+    newColorsButton.textContent = "PLAY AGAIN?"
 }
 
 // //so this is working and randoming for the 1 element and its also a border
