@@ -66,11 +66,27 @@ function guessedCorrectly() {
     newColorsButton.textContent = "PLAY AGAIN?"
 }
 
+function toggleSelectedEasy() {
+        hardButton.classList.remove("selected")
+        easyButton.classList.add("selected")
+    } 
+
+function toggleSelectedHard() {
+        easyButton.classList.remove("selected")
+        hardButton.classList.add("selected")
+    } 
+
 // //so this is working and randoming for the 1 element and its also a border
 // document.querySelector("span").addEventListener("click", function () {
 //     testColor.style.border = "3px solid " + randomColor()
 // })
+hardButton.classList.add("selected")
 randomAllBoxesColors()
 newColorsButton.addEventListener("click", randomAllBoxesColors)
+// [randomAllBoxesColors, toggleSelectedHard].array.forEach(func => {
+//     hardButton.addEventListener("click", func)
+// }) gonna work on this later
 hardButton.addEventListener("click", randomAllBoxesColors)
+hardButton.addEventListener("click", toggleSelectedHard)
 easyButton.addEventListener("click", removeThreeBottomBoxes)
+easyButton.addEventListener("click", toggleSelectedEasy)

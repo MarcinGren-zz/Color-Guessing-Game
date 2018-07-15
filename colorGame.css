@@ -80,3 +80,7 @@ button {
     background-color: black;
     pointer-events:none;
 }
+
+.selected {
+    background: blue;
+}
