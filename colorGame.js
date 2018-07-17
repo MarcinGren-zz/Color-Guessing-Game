@@ -56,6 +56,7 @@ function removeThreeBottomBoxes() {
         console.log(allColorSquares[i])
     }
     correctAnswer = allColorSquares[Math.floor(Math.random() * 3)].style.backgroundColor.toUpperCase()
+    mainConsole.style.backgroundColor = "steelblue"
 }
 
 function guessedCorrectly() {
