@@ -45,7 +45,8 @@ function randomAllBoxesColors() {
         })
     }
     getRGBFromRandomedAnswer()
-    mainConsole.style.removeProperty("backgroundColor")
+    mainConsole.style.backgroundColor = "steelblue"    
+    tryAgainPlace.innerHTML = ""
 }
 
 function removeThreeBottomBoxes() {
@@ -56,7 +57,6 @@ function removeThreeBottomBoxes() {
         console.log(allColorSquares[i])
     }
     correctAnswer = allColorSquares[Math.floor(Math.random() * 3)].style.backgroundColor.toUpperCase()
-    mainConsole.style.backgroundColor = "steelblue"
 }
 
 function guessedCorrectly() {
